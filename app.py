@@ -24,11 +24,14 @@ st.write("Upload an image to get a caption, or enter a prompt to generate an ima
 # --- Image Captioning (BLIP) ---
 @st.cache_resource
 def load_blip():
-    processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
+    processor = BlipProcessor.from_pretrained(
+        "Salesforce/blip-image-captioning-base",
+        token=hf_token
+    )
     model = BlipForConditionalGeneration.from_pretrained(
         "Salesforce/blip-image-captioning-base",
         torch_dtype=torch.float32,
-        device_map="cpu"
+        token=hf_token
     )
     return processor, model
 
@@ -110,3 +113,14 @@ with tab2:
         with st.spinner("Generating image..."):
             image = generate_image(prompt)
         st.image(image, caption="Generated Image", use_column_width=True)
+        # Add download button for generated image
+        import io
+        buf = io.BytesIO()
+        image.save(buf, format="PNG")
+        buf.seek(0)
+        st.download_button(
+            label="Download Generated Image",
+            data=buf,
+            file_name="generated_image.png",
+            mime="image/png"
+        )
