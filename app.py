@@ -24,7 +24,8 @@ summarizer = pipeline(
 
 st.set_page_config(page_title="Modern Edge Agent", layout="centered")
 st.title("Modern Edge Agent: Image Captioning & Generation")
-st.write("Upload an image to get a caption, or enter a prompt to generate an image. Runs on edge devices!")
+st.write("Upload an image to get a caption, or enter a prompt to "
+         "generate an image. Runs on edge devices!")
 
 
 @st.cache_resource
