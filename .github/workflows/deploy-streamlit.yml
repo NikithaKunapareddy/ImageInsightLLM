@@ -50,7 +50,8 @@ jobs:
             --platform managed \
             --region us-central1 \
             --allow-unauthenticated \
-            --set-env-vars HF_TOKEN=${{ secrets.HF_TOKEN }}
+            --set-env-vars HF_TOKEN=${{ secrets.HF_TOKEN }} \
+            --memory=1Gi
 
       - name: Print deployed URL
         run: |
