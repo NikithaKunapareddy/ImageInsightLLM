@@ -1,20 +1,23 @@
+# Core dependencies
 easyocr==1.7.2
 streamlit==1.47.1
-# BLIP requires transformers >=4.21.0; 4.54.0 is compatible
-transformers==4.54.0
-torch>=2.6.0
+torch>=2.0.0
 Pillow==11.3.0
-accelerate==1.9.0
-diffusers==0.34.0
 numpy==1.26.4
+requests
+python-dotenv
+sentencepiece==0.2.0
 packaging==24.2
 urllib3==2.4.0
-sentencepiece==0.2.0
-python-dotenv
-requests
-# Dependency conflict resolutions
+
+# Transformers & Hugging Face Ecosystem
+transformers==4.31.0  # ✅ supports BLIP
+accelerate==0.21.0
+diffusers==0.34.0
+
+# Streamlit & system-related
+click~=8.1.0
+tenacity<9.0.0,>=8.2.3
 psutil<6,>=5
 protobuf<6.0,>=3.19.5,!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
 cachetools<6.0,>=2.0.0
-tenacity<9.0.0,>=8.2.3
-click~=8.1.0
