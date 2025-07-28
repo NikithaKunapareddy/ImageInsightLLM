@@ -30,9 +30,9 @@ jobs:
 
       - name: Run Streamlit app (test launch)
         run: |
-          streamlit run app.py &
+          streamlit run app.py --server.port=8080 &
           sleep 10
-          curl -I http://localhost:8501
+          curl -I http://localhost:8080
 
       - name: Upload Streamlit logs
         if: always()
