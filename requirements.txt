@@ -11,7 +11,7 @@ packaging==24.2
 urllib3==2.4.0
 
 # Transformers & Hugging Face Ecosystem
-transformers==4.31.0  # ✅ supports BLIP
+transformers>=4.31.0 # ✅ supports BLIP
 accelerate==0.21.0
 diffusers==0.34.0
 
