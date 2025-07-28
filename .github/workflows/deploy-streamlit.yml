@@ -39,7 +39,7 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t us-central1-docker.pkg.dev/nikitha-2025-1/streamlit-app/streamlit-app:latest .
+          docker build --no-cache -t us-central1-docker.pkg.dev/nikitha-2025-1/streamlit-app/streamlit-app:latest .
           docker push us-central1-docker.pkg.dev/nikitha-2025-1/streamlit-app/streamlit-app:latest
 
 
@@ -51,7 +51,7 @@ jobs:
             --region us-central1 \
             --allow-unauthenticated \
             --set-env-vars HF_TOKEN=${{ secrets.HF_TOKEN }} \
-            --memory=1Gi
+            --memory=2Gi
 
       - name: Print deployed URL
         run: |
