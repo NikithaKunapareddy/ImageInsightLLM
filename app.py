@@ -114,10 +114,10 @@ with tab1:
             st.warning(f"Summary generation failed: {e}")
             if extracted_text:
                 summary = (f"This image contains: {caption}. "
-                          f"The following text is present: {extracted_text}")
+                           f"The following text is present: {extracted_text}")
             else:
                 summary = (f"This image contains: {caption}. "
-                          f"No readable text was detected.")
+                           f"No readable text was detected.")
             st.info(f"**Summary:** {summary}")
 
 with tab2:
