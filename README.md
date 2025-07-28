@@ -26,7 +26,7 @@
 ---
 
 
-## �️ App Flow
+##  🔀  App Flow
 
 ### 1. Image Captioning Tab
 1. **Upload Image** → 2. **Caption Generated (BLIP)** → 3. **OCR Text Extraction** → 4. **Dynamic LLM Summary**
@@ -36,6 +36,30 @@
 
 ### 2. Text-to-Image Generation Tab
 1. **Enter Prompt** → 2. **Image Generated via Hugging Face API** → 3. **View & Download**
+
+---
+
+## 🧪 Examples
+
+### Image Captioning Example
+
+1. **Upload Image:** ![Example Image](https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80)
+2. **Generated Caption:**
+   > "A group of people standing on top of a mountain with their hands raised."
+3. **Extracted Text:**
+   > (If present in the image, e.g., "SUMMIT 2025")
+4. **Summary:**
+   > "A group of people celebrate at the mountain summit. The text 'SUMMIT 2025' is visible."
+
+### Text-to-Image Generation Example
+
+1. **Prompt:**
+   > "A futuristic city skyline at sunset, with flying cars and neon lights."
+2. **Generated Image:**
+   > ![Generated Example](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/image_captioning.png)
+3. **Result:**
+   > The app displays the generated image with your prompt as the caption.
+
 
 ---
 
