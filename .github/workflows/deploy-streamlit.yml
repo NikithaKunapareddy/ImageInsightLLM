@@ -51,7 +51,7 @@ jobs:
             --region us-central1 \
             --allow-unauthenticated \
             --set-env-vars HF_TOKEN=${{ secrets.HF_TOKEN }} \
-            --memory=2Gi
+            --memory=4Gi
 
       - name: Print deployed URL
         run: |
