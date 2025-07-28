@@ -1,5 +1,6 @@
 easyocr==1.7.2
 streamlit==1.47.1
+# BLIP requires transformers >=4.21.0; 4.54.0 is compatible
 transformers==4.54.0
 torch>=2.6.0
 Pillow==11.3.0
